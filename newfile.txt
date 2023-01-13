@@ -1,3 +1,6 @@
 Hello World
 
 This is a second line of text
+
+One API to order food using the Menu API
+Another API, the Table Booking API, to faciliate reservation of tables for dining on a specific date and for a certain number of people
