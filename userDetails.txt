@@ -2,3 +2,8 @@ superuser:
 username - admin
 email - admin@littlelemon.com
 password - admin
+
+manager:
+username - manager
+email - manager@littlelemon.com
+password - Pass123!
