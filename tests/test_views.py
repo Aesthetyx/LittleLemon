@@ -11,11 +11,12 @@ class MenuViewTest(TestCase):
         cls.testMenuItemTwo = Menu.objects.create(title="Test Menu Item 2", price=5, inventory=50)
         cls.testMenuItemThree = Menu.objects.create(title="Test Menu Item 3", price=7, inventory=8)
         # set up user
-        User.objects.create_superuser("admin", "admin@littlelemon.com", "admin")
+        user = User.objects.create_superuser("admin", "admin@littlelemon.com", "admin")
+        user.save()
         
     def test_get_all(self):
         client = Client()
-        client.force_login(User.objects.get(username="admin"))
+        client.login(username="admin", password="admin")
         viewResponse = client.get(reverse("menu"))
         expectedResponse = Menu.objects.all()
         serializedExpectedResponse = MenuSerializer(expectedResponse, many=True)
