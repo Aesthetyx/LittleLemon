@@ -3,11 +3,11 @@ from django.db import models
 # Create your models here.
 class Booking(models.Model):
     name = models.CharField(max_length=255)
-    noOfGuests = models.IntegerField()
+    no_of_guests = models.IntegerField()
     bookingDate = models.DateTimeField()
     
     def __str__(self) -> str:
-        return self.name + " (" + str(self.noOfGuests) + " pax ) - " + str(self.bookingDate)
+        return self.name + " (" + str(self.no_of_guests) + " pax ) - " + str(self.bookingDate)
     
 class Menu(models.Model):
     title = models.CharField(max_length=255)

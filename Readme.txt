@@ -1,4 +1,6 @@
-relevant URLS/API endpoints
+Change the MySQL database name and password for the MySQL root user in the settings.py file to match your details if they differ from mine, my details are as follows:
+- database name: LittleLemon
+- root user password: Pass123!
 
 Static contents URL:
 - to view static HTML content: send a HTTP GET request to http://127.0.0.1:8000/restaurant/home
@@ -17,8 +19,8 @@ Booking API endpoints (user must be authenticated to access these endpoints):
 - to edit a specific booking: send a HTTP PUT or PATCH request to http://127.0.0.1:8000/restaurant/bookings/1 (change 1 to any other booking ID to edit other bookings)
 - to delete a specific booking: send a HTTP DELETE request to http://127.0.0.1:8000/restaurant/bookings/1 (change 1 to any other booking ID to delete other bookings)
 
-User registration / authentication:
+User registration / authentication API endpoints:
 - to view all users: send a HTTP GET request to http://127.0.0.1:8000/auth/users
 - to register a new user: send a HTTP POST request to http://127.0.0.1:8000/auth/users/
-- to generate token (i.e., login): send a HTTP POST request to http://127.0.0.1:8000/auth/token/login or http://127.0.0.1:8000/api-token-auth
+- to generate token (i.e., login): send a HTTP POST request to http://127.0.0.1:8000/auth/token/login or http://127.0.0.1:8000/restaurant/api-token-auth
 - to delete token (i.e., logout): send a HTTP POST request to http://127.0.0.1:8000/auth/token/logout
